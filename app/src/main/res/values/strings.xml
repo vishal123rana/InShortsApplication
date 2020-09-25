@@ -2,4 +2,5 @@
     <string name="app_name">InShortsApplication</string>
     <string name="parent">Parent</string>
     <string name="child">child</string>
+    <string name="todo">TODO</string>
 </resources>
