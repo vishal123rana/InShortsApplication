@@ -44,6 +44,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         bundle.putString("Image",String.valueOf(arr[position]));
         bundle.putString("parent",headLine[position]);
         bundle.putString("Child",paragraph[position]);
+        bundle.putString("Bottom",bottomText[position]);
         childFragment.setArguments(bundle);
         return childFragment;
     }

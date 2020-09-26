@@ -3,4 +3,5 @@
     <string name="parent">Parent</string>
     <string name="child">child</string>
     <string name="todo">TODO</string>
+    <string name="hello">Hello</string>
 </resources>
