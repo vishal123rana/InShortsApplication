@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
+
 import java.util.Objects;
 
 public class ChildFragment extends Fragment {
@@ -29,7 +32,7 @@ public class ChildFragment extends Fragment {
        bottom = view.findViewById(R.id.bottom1);
        Bundle bundle = getArguments();
        assert bundle != null;
-       image.setImageResource(Integer.parseInt(Objects.requireNonNull(bundle.getString("Image"))));
+       Glide.with(Objects.requireNonNull(getContext())).load(bundle.getString("Image")).into(image);
        tvParent.setText( bundle.getString("parent"));
        tvChild.setText(bundle.getString("Child"));
        String text = bundle.getString("Bottom");
