@@ -34,8 +34,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 //            "Figure excludes government income support: ILO",
 //            "Only 18% of debt has been resolved"
 //    };
-   private final List<Article> articleList;
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int b,List<Article> articleList) {
+   private final List<News> articleList;
+    public ViewPagerAdapter(@NonNull FragmentManager fm, int b,List<News> articleList) {
         super(fm,b);
         this.articleList = articleList;
     }
@@ -56,10 +56,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 //         bundle.putString("parent",news.get(position).getTitle());
 //         bundle.putString("Child",news.get(position).getDescription());
 //         bundle.putString("Bottom",news.get(position).getContent());
-        bundle.putString("Image",articleList.get(position).getUrlToImage());
+        bundle.putString("Image",articleList.get(position).getImageUrl());
         bundle.putString("parent",articleList.get(position).getTitle());
         bundle.putString("Child",articleList.get(position).getDescription());
-      //  bundle.putString("Bottom",articleList.get(position).getContent());
+        bundle.putString("Bottom",articleList.get(position).getContent());
          childFragment.setArguments(bundle);
          return childFragment;
     }
