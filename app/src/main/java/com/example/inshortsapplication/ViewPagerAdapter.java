@@ -7,10 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
@@ -38,10 +34,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 //            "Figure excludes government income support: ILO",
 //            "Only 18% of debt has been resolved"
 //    };
-   private List<News> news;
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int b,List<News> news) {
+   private final List<Article> articleList;
+    public ViewPagerAdapter(@NonNull FragmentManager fm, int b,List<Article> articleList) {
         super(fm,b);
-        this.news = news;
+        this.articleList = articleList;
     }
     @NonNull
     @Override
@@ -56,16 +52,20 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 //        bundle.putString("Title",news.get(position).getTitle());
 //        bundle.putString("Description",news.get(position).getDescription());
 //        bundle.putString("Bottom",news.get(position).getBottom());
-         bundle.putString("Image",news.get(position).getUrlToImage());
-         bundle.putString("parent",news.get(position).getTitle());
-         bundle.putString("Child",news.get(position).getDescription());
-         bundle.putString("Bottom",news.get(position).getContent());
+//         bundle.putString("Image",news.get(position).getUrlToImage());
+//         bundle.putString("parent",news.get(position).getTitle());
+//         bundle.putString("Child",news.get(position).getDescription());
+//         bundle.putString("Bottom",news.get(position).getContent());
+        bundle.putString("Image",articleList.get(position).getUrlToImage());
+        bundle.putString("parent",articleList.get(position).getTitle());
+        bundle.putString("Child",articleList.get(position).getDescription());
+      //  bundle.putString("Bottom",articleList.get(position).getContent());
          childFragment.setArguments(bundle);
          return childFragment;
     }
     @Override
     public int getCount() {
-        return news.size();
+        return articleList.size();
     }
 
 }
