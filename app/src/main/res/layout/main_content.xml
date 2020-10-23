@@ -5,7 +5,7 @@
     <com.example.inshortsapplication.VerticalViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewPager">
+        android:id="@+id/viewPager1">
 
     </com.example.inshortsapplication.VerticalViewPager>
 </RelativeLayout>

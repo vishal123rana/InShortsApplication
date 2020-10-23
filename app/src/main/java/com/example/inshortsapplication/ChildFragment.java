@@ -33,6 +33,7 @@ public class ChildFragment extends Fragment {
        Bundle bundle = getArguments();
        assert bundle != null;
        Glide.with(this).load(bundle.getString("Image")).into(image);
+     //  image.setImageResource(Integer.valueOf(bundle.get("Image")));
        tvParent.setText( bundle.getString("parent"));
        tvChild.setText(bundle.getString("Child"));
        String text = bundle.getString("Bottom");
