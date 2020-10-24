@@ -26,6 +26,9 @@ public class Article {
     @SerializedName("publishedAt")
     @Expose
     private String publishedAt;
+    @SerializedName("content")
+    @Expose
+    private String content;
 
     public Source getSource() {
         return source;
@@ -81,5 +84,12 @@ public class Article {
 
     public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+    public String getContent(){
+        return this.content;
     }
 }

@@ -79,7 +79,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         bundle.putString("Image",article.getUrlToImage());
         bundle.putString("parent",article.getTitle());
         bundle.putString("Child",article.getDescription());
-        bundle.putString("Bottom",article.getAuthor());
+        bundle.putString("Bottom",article.getContent());
+        bundle.putString("url",article.getUrl());
          childFragment.setArguments(bundle);
          return childFragment;
     }
