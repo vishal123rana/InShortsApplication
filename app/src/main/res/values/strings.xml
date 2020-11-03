@@ -2,6 +2,18 @@
     <string name="app_name">InShortsApplication</string>
     <string name="parent">Parent</string>
     <string name="child">child</string>
-    <string name="todo">TODO</string>
+
     <string name="hello">Hello</string>
+    <string name="description">description</string>
+    <string name="headline">headLine</string>
+    <string name="swipe_left_to_read_more">Swipe left to read more</string>
+    <string name="head">head</string>
+    <string name="tap_here_to_read_more">Tap here to read more</string>
+    <string name="title_activity_right">right</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="todo">TODO</string>
 </resources>

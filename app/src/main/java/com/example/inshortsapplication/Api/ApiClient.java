@@ -23,7 +23,7 @@ public class ApiClient {
     public static final String BASE_URL = "https://newsapi.org/v2/";
     public static Retrofit retrofit;
     public static Retrofit getApiClient(){
-        if(retrofit == null){
+        if(retrofit == null){    // Singleton design pattern
             retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                     .client(getUnsafeOkHttpClient().build())
                     .addConverterFactory(GsonConverterFactory.create()).build();

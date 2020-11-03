@@ -1,6 +1,7 @@
 package com.example.inshortsapplication;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.inshortsapplication.Api.ApiClient;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                         articles.clear();
                     }
                     articles = response.body().getArticle();
-                    viewAdapter = new ViewPagerAdapter(getSupportFragmentManager(),1,articles);
+                    viewAdapter = new ViewPagerAdapter(getApplicationContext(),getSupportFragmentManager(),1,articles);
                     viewPager.setAdapter(viewAdapter);
                   //  viewAdapter.notifyDataSetChanged();
 //                    for(Article article:articles){
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 //                        Log.e("url",article.getUrl());
 //                        Log.e("ImagetoUrl",article.getUrlToImage());
 //                    }
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"No Data Found!",Toast.LENGTH_LONG).show();
