@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         Call<News> call;
         String country = "in";
-        String API_KEY = "757d82e36f3c456fa1fd7fae577121be";
+        String API_KEY = "757d82e36f3c456fa1fd7???????????";
         call = apiInterface.getNews(country, API_KEY);
         call.enqueue(new Callback<News>() {
             @Override
